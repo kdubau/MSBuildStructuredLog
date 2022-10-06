@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ISI-rA-dV2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="NSView safe area layout guides" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,11 +12,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="StructuredLogViewer.Cocoa" id="1Xt-HY-uBw">
+                            <menuItem title="MSBuildStructuredLog.Cocoa" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="StructuredLogViewer.Cocoa" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="MSBuildStructuredLog.Cocoa" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About StructuredLogViewer.Cocoa" id="5kV-Vb-QxS">
+                                        <menuItem title="About MSBuildStructuredLog.Cocoa" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -29,7 +30,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide StructuredLogViewer.Cocoa" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide MSBuildStructuredLog.Cocoa" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +48,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit StructuredLogViewer.Cocoa" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit MSBuildStructuredLog.Cocoa" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -525,19 +526,22 @@
                                                                 <menuItem title="Paragraph" enabled="NO" id="ZvO-Gk-QUH">
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                 </menuItem>
-                                                                <menuItem title="    Default" id="YGs-j5-SAR">
+                                                                <menuItem id="YGs-j5-SAR">
+                                                                    <string key="title">	Default</string>
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                     <connections>
                                                                         <action selector="makeBaseWritingDirectionNatural:" target="Ady-hI-5gd" id="qtV-5e-UBP"/>
                                                                     </connections>
                                                                 </menuItem>
-                                                                <menuItem title="    Left to Right" id="Lbh-J2-qVU">
+                                                                <menuItem id="Lbh-J2-qVU">
+                                                                    <string key="title">	Left to Right</string>
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                     <connections>
                                                                         <action selector="makeBaseWritingDirectionLeftToRight:" target="Ady-hI-5gd" id="S0X-9S-QSf"/>
                                                                     </connections>
                                                                 </menuItem>
-                                                                <menuItem title="    Right to Left" id="jFq-tB-4Kx">
+                                                                <menuItem id="jFq-tB-4Kx">
+                                                                    <string key="title">	Right to Left</string>
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                     <connections>
                                                                         <action selector="makeBaseWritingDirectionRightToLeft:" target="Ady-hI-5gd" id="5fk-qB-AqJ"/>
@@ -547,19 +551,22 @@
                                                                 <menuItem title="Selection" enabled="NO" id="cqv-fj-IhA">
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                 </menuItem>
-                                                                <menuItem title="    Default" id="Nop-cj-93Q">
+                                                                <menuItem id="Nop-cj-93Q">
+                                                                    <string key="title">	Default</string>
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                     <connections>
                                                                         <action selector="makeTextWritingDirectionNatural:" target="Ady-hI-5gd" id="lPI-Se-ZHp"/>
                                                                     </connections>
                                                                 </menuItem>
-                                                                <menuItem title="    Left to Right" id="BgM-ve-c93">
+                                                                <menuItem id="BgM-ve-c93">
+                                                                    <string key="title">	Left to Right</string>
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                     <connections>
                                                                         <action selector="makeTextWritingDirectionLeftToRight:" target="Ady-hI-5gd" id="caW-Bv-w94"/>
                                                                     </connections>
                                                                 </menuItem>
-                                                                <menuItem title="    Right to Left" id="RB4-Sm-HuC">
+                                                                <menuItem id="RB4-Sm-HuC">
+                                                                    <string key="title">	Right to Left</string>
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                     <connections>
                                                                         <action selector="makeTextWritingDirectionRightToLeft:" target="Ady-hI-5gd" id="EXD-6r-ZUu"/>
@@ -654,7 +661,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="StructuredLogViewer.Cocoa Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="MSBuildStructuredLog.Cocoa Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -675,143 +682,95 @@
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
         <!--Window Controller-->
-        <scene sceneID="R2V-B0-nI4">
+        <scene sceneID="owU-hm-SLv">
             <objects>
-                <windowController id="B8D-0N-5wS" customClass="WindowController" sceneMemberID="viewController">
-                    <window key="window" title="Binlog viewer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                <windowController id="ISI-rA-dV2" customClass="MainWindowController" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="i3s-H0-FqX" customClass="MainWindow">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <toolbar key="toolbar" implicitIdentifier="998EA4CA-0BA9-4A57-A3F1-D1573C34AF86" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="j2M-Fe-DUQ">
+                        <rect key="contentRect" x="686" y="528" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="3840" height="1575"/>
+                        <view key="contentView" id="vfE-gw-UaU">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <toolbar key="toolbar" implicitIdentifier="09D11707-F4A3-4FD5-970E-AC5832E91C2B" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="wey-o7-a48">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="AWf-Bq-u6S"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="Mwp-1f-oOz"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="bkM-n0-lTn"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="WCN-Qj-X49"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="7LX-JG-7sw"/>
-                                <toolbarItem implicitItemIdentifier="F1CC6E3F-14A2-4710-A0BA-C7D499D7B6A3" label="Open" paletteLabel="Open" tag="-1" image="NSTouchBarNewFolderTemplate" bordered="YES" id="0mG-pv-5II">
-                                    <size key="minSize" width="30" height="25"/>
-                                    <size key="maxSize" width="30" height="25"/>
-                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="vrB-1d-Xef"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="XC3-Bm-Kb6"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="zhz-Ag-SFW"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="2Vd-pu-0j1"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="299-Cl-drW"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="7LX-JG-7sw"/>
-                                <toolbarItem reference="0mG-pv-5II"/>
+                                <toolbarItem reference="vrB-1d-Xef"/>
+                                <toolbarItem reference="XC3-Bm-Kb6"/>
+                                <toolbarItem reference="299-Cl-drW"/>
+                                <toolbarItem reference="zhz-Ag-SFW"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
-                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                            <outlet property="delegate" destination="ISI-rA-dV2" id="WvI-y2-Raw"/>
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="eWs-0i-3gd"/>
+                        <segue destination="i87-Fz-1zM" kind="relationship" relationship="window.shadowedContentViewController" id="BGI-Rw-SML"/>
                     </connections>
                 </windowController>
-                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="LYD-JV-kvF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="66" y="230"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Main View Controller-->
+        <scene sceneID="YYe-vT-hPD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
-                    <splitView key="view" arrangesAllSubviews="NO" vertical="YES" id="4Kk-LI-CDn">
+                <splitViewController id="i87-Fz-1zM" customClass="MainViewController" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="0Q7-QR-5z4"/>
+                        <splitViewItem id="Dqy-dX-2Pt"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="NW5-Kw-CDe" customClass="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <subviews>
-                            <customView misplaced="YES" id="Bcu-DC-96K">
-                                <rect key="frame" x="0.0" y="0.0" width="222" height="300"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <subviews>
-                                    <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwW-eS-wI7">
-                                        <rect key="frame" x="0.0" y="0.0" width="202" height="300"/>
-                                        <clipView key="contentView" id="AkC-vC-9jF">
-                                            <rect key="frame" x="1" y="1" width="200" height="298"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="13" outlineTableColumn="2a6-RO-Owa" id="8T0-Qi-2qD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="220" height="298"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <size key="intercellSpacing" width="17" height="0.0"/>
-                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
-                                                    <tableColumns>
-                                                        <tableColumn width="208" minWidth="40" maxWidth="1000" id="2a6-RO-Owa">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                                            </tableHeaderCell>
-                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="MAI-yX-tGE">
-                                                                <font key="font" metaFont="system"/>
-                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            </textFieldCell>
-                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                            <prototypeCellViews>
-                                                                <tableCellView id="MJd-85-Deu">
-                                                                    <rect key="frame" x="8" y="0.0" width="203" height="24"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                    <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Cdv-zT-bgR">
-                                                                            <rect key="frame" x="0.0" y="4" width="203" height="16"/>
-                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="AnN-jw-9pQ">
-                                                                                <font key="font" usesAppearanceFont="YES"/>
-                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                            </textFieldCell>
-                                                                        </textField>
-                                                                    </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstItem="Cdv-zT-bgR" firstAttribute="leading" secondItem="MJd-85-Deu" secondAttribute="leading" constant="2" id="EAe-SL-QN7"/>
-                                                                        <constraint firstItem="Cdv-zT-bgR" firstAttribute="centerX" secondItem="MJd-85-Deu" secondAttribute="centerX" id="X9b-sR-Tvm"/>
-                                                                        <constraint firstItem="Cdv-zT-bgR" firstAttribute="centerY" secondItem="MJd-85-Deu" secondAttribute="centerY" id="rwY-Lz-zu0"/>
-                                                                    </constraints>
-                                                                    <connections>
-                                                                        <outlet property="textField" destination="Cdv-zT-bgR" id="rfg-pe-mtu"/>
-                                                                    </connections>
-                                                                </tableCellView>
-                                                            </prototypeCellViews>
-                                                        </tableColumn>
-                                                    </tableColumns>
-                                                </outlineView>
-                                            </subviews>
-                                        </clipView>
-                                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="tdM-4u-aBe">
-                                            <rect key="frame" x="1" y="283" width="200" height="16"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="6I7-Ux-TCe">
-                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                    </scrollView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="dwW-eS-wI7" secondAttribute="trailing" id="fKt-Vp-eEf"/>
-                                    <constraint firstAttribute="bottom" secondItem="dwW-eS-wI7" secondAttribute="bottom" id="fku-TB-Nqt"/>
-                                    <constraint firstItem="dwW-eS-wI7" firstAttribute="top" secondItem="Bcu-DC-96K" secondAttribute="top" id="og7-Cc-b5c"/>
-                                    <constraint firstItem="dwW-eS-wI7" firstAttribute="leading" secondItem="Bcu-DC-96K" secondAttribute="leading" id="u5C-n8-37S"/>
-                                </constraints>
-                            </customView>
-                            <customView fixedFrame="YES" id="OpB-Ef-L8E">
-                                <rect key="frame" x="231" y="0.0" width="219" height="300"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </customView>
-                        </subviews>
-                        <holdingPriorities>
-                            <real value="200"/>
-                            <real value="250"/>
-                        </holdingPriorities>
+                        <autoresizingMask key="autoresizingMask"/>
                     </splitView>
-                </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <treeController id="CgR-z1-2CM"/>
+                    <connections>
+                        <segue destination="s60-64-W5S" kind="relationship" relationship="splitItems" id="YdF-fZ-ihX"/>
+                        <segue destination="g9B-50-isW" kind="relationship" relationship="splitItems" id="ULZ-bF-gUj"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="3bd-UW-iCd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="727"/>
+            <point key="canvasLocation" x="704" y="230"/>
+        </scene>
+        <!--Sidebar View Controller-->
+        <scene sceneID="kCp-uc-5zW">
+            <objects>
+                <viewController id="s60-64-W5S" customClass="SidebarViewController" sceneMemberID="viewController">
+                    <view key="view" id="JRT-eV-5Oa" customClass="SidebarView">
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <viewLayoutGuide key="safeArea" id="HIC-17-h2b"/>
+                        <viewLayoutGuide key="layoutMargins" id="niS-MI-Rx7"/>
+                    </view>
+                </viewController>
+                <customObject id="fUT-bM-8eq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="491" y="727"/>
+        </scene>
+        <!--Log View Controller-->
+        <scene sceneID="ztF-1G-PnK">
+            <objects>
+                <viewController id="g9B-50-isW" customClass="LogViewController" sceneMemberID="viewController">
+                    <view key="view" id="Zn0-l6-YBR" customClass="LogView">
+                        <rect key="frame" x="0.0" y="0.0" width="302" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <viewLayoutGuide key="safeArea" id="QNf-WV-VQM"/>
+                        <viewLayoutGuide key="layoutMargins" id="BnI-6N-96G"/>
+                    </view>
+                </viewController>
+                <customObject id="t5O-nt-crJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="727"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="NSTouchBarNewFolderTemplate" width="19" height="14"/>
-    </resources>
 </document>
